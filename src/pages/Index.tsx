@@ -91,8 +91,10 @@ function Index() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-8">
               <div className="flex items-center space-x-2">
-                <Icon name="MessageSquareText" size={32} className="text-primary" />
-                <span className="text-2xl font-bold text-gray-900">Отзывы.рф</span>
+                <div className="gradient-brand p-2 rounded-lg">
+                  <Icon name="MessageSquareText" size={28} className="text-white" />
+                </div>
+                <span className="text-2xl font-bold gradient-text">Отзывы.рф</span>
               </div>
               <nav className="hidden md:flex space-x-6">
                 <a href="#" className="text-gray-700 hover:text-primary transition-colors">Главная</a>
@@ -117,12 +119,12 @@ function Index() {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary/10 to-blue-50 py-16">
+      <section className="gradient-brand py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Честные отзывы о товарах и услугах
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
             Находите проверенные отзывы от реальных покупателей. Делитесь своим опытом и помогайте другим принимать правильные решения.
           </p>
           <div className="max-w-2xl mx-auto flex gap-4">
@@ -136,7 +138,7 @@ function Index() {
                 className="pl-10 h-12 text-lg"
               />
             </div>
-            <Button size="lg" className="h-12 px-8">
+            <Button size="lg" className="h-12 px-8 bg-white text-gray-900 hover:bg-gray-100">
               <Icon name="Search" size={20} className="mr-2" />
               Найти
             </Button>
@@ -155,7 +157,9 @@ function Index() {
                 {categories.map((category) => (
                   <Card key={category.name} className="hover:shadow-md transition-shadow cursor-pointer">
                     <CardContent className="p-6 text-center">
-                      <Icon name={category.icon as any} size={32} className="text-primary mb-3 mx-auto" />
+                      <div className="gradient-brand p-3 rounded-full w-fit mx-auto mb-3">
+                        <Icon name={category.icon as any} size={24} className="text-white" />
+                      </div>
                       <h3 className="font-semibold text-gray-900 mb-1">{category.name}</h3>
                       <p className="text-sm text-gray-600">{category.count} отзывов</p>
                     </CardContent>
@@ -253,12 +257,12 @@ function Index() {
               </Card>
 
               {/* Add Review CTA */}
-              <Card className="bg-gradient-to-br from-primary/10 to-blue-50">
+              <Card className="gradient-brand">
                 <CardContent className="p-6 text-center">
-                  <Icon name="PenTool" size={32} className="text-primary mb-3 mx-auto" />
-                  <h3 className="font-semibold text-gray-900 mb-2">Оставьте отзыв</h3>
-                  <p className="text-sm text-gray-600 mb-4">Поделитесь своим опытом и помогите другим</p>
-                  <Button className="w-full">
+                  <Icon name="PenTool" size={32} className="text-white mb-3 mx-auto" />
+                  <h3 className="font-semibold text-white mb-2">Оставьте отзыв</h3>
+                  <p className="text-sm text-white/90 mb-4">Поделитесь своим опытом и помогите другим</p>
+                  <Button className="w-full bg-white text-gray-900 hover:bg-gray-100">
                     <Icon name="Plus" size={16} className="mr-2" />
                     Написать отзыв
                   </Button>
@@ -300,7 +304,9 @@ function Index() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Icon name="MessageSquareText" size={24} className="text-primary" />
+                <div className="gradient-brand p-2 rounded-lg">
+                  <Icon name="MessageSquareText" size={20} className="text-white" />
+                </div>
                 <span className="text-xl font-bold">Отзывы.рф</span>
               </div>
               <p className="text-gray-400 text-sm">

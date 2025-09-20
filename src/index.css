@@ -17,6 +17,7 @@
 
     --primary: 338 87% 56%;
     --primary-foreground: 210 40% 98%;
+    --gradient-brand: linear-gradient(135deg, #fee19f 0%, #ff739a 100%);
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -99,5 +100,16 @@
 
   body {
     @apply bg-background text-foreground font-inter;
+  }
+
+  .gradient-brand {
+    background: var(--gradient-brand);
+  }
+
+  .gradient-text {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
